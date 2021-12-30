@@ -39,6 +39,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-cors-headers"
+version = "3.10.1"
+description = "django-cors-headers is a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS)."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[package.dependencies]
+Django = ">=2.2"
+
+[[package]]
 name = "django-filter"
 version = "21.1"
 description = "Django-filter is a reusable Django application for allowing users to filter querysets dynamically."
@@ -206,7 +217,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytes
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "4b38ded20b4723fc400a3676a6df7060dcf5dccf626c7b6b089a4fdac2da6d96"
+content-hash = "3409474e4e1b984df43a5f27ef7bd240d0c403190bc8dcb5b495b6dc4c4aa80c"
 
 [metadata.files]
 asgiref = [
@@ -234,6 +245,10 @@ asgiref = [
 django = [
     {file = "Django-4.0-py3-none-any.whl", hash = "sha256:59304646ebc6a77b9b6a59adc67d51ecb03c5e3d63ed1f14c909cdfda84e8010"},
     {file = "Django-4.0.tar.gz", hash = "sha256:d5a8a14da819a8b9237ee4d8c78dfe056ff6e8a7511987be627192225113ee75"},
+]
+django-cors-headers = [
+    {file = "django-cors-headers-3.10.1.tar.gz", hash = "sha256:b5a874b492bcad99f544bb76ef679472259eb41ee5644ca62d1a94ddb26b7f6e"},
+    {file = "django_cors_headers-3.10.1-py3-none-any.whl", hash = "sha256:1390b5846e9835b0911e2574409788af87cd9154246aafbdc8ec546c93698fe6"},
 ]
 django-filter = [
     {file = "django-filter-21.1.tar.gz", hash = "sha256:632a251fa8f1aadb4b8cceff932bb52fe2f826dd7dfe7f3eac40e5c463d6836e"},

@@ -7,6 +7,7 @@ from django.contrib.auth.password_validation import validate_password
 
 
 
+
 class RegisterSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
             required=True,
@@ -55,3 +56,9 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         # Add custom claims
         token['username'] = user.username
         return token
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'username', )
