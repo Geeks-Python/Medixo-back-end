@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Medixo_admin',
     'Doctor',
-    'Pharmacy',
     
     "rest_framework",
 ]
@@ -137,3 +136,5 @@ REST_FRAMEWORK = {
     #     "rest_framework.authentication.BasicAuthentication",
     # ],
 }
+
+AUTH_USER_MODEL = 'Medixo_admin.User'
