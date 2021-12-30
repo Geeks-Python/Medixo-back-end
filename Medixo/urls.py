@@ -25,11 +25,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     path('auth/', include('auth.urls')),
     path("api/v1/pharmacy/", include("Pharmacy.urls")),
-<<<<<<< HEAD
-    path("api/v1/doctor/", include("Doctor.urls")),
-=======
     path("api/v1/Doctor/", include("Doctor.urls")),
->>>>>>> 7ba62cfdc11daecef80eb3625d30697bed52bfce
 
 ]
 if settings.DEBUG:
