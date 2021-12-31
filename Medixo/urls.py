@@ -18,9 +18,13 @@ from django.urls import path ,include
 from rest_framework.routers import DefaultRouter
 from django.conf import settings
 from django.conf.urls.static import static
-
+from rest_framework_simplejwt.views import TokenObtainPairView ,TokenRefreshView, TokenVerifyView
 
 urlpatterns = [
+    path('api/token/',TokenObtainPairView.as_view()),
+    path('api/token/refresh/',TokenRefreshView.as_view()),
+    path('api/token/verify/',TokenVerifyView.as_view()),
+
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('auth/', include('auth.urls')),

@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'Medixo_admin',
     'Doctor',
     'Pharmacy',
+<<<<<<< HEAD
     
+=======
+>>>>>>> fde71d5717001d0abf23cdd5fa1e529ee91a43a9
     'corsheaders',
     "rest_framework",
 ]
@@ -49,6 +52,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -58,6 +62,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Medixo.urls'
 CORS_ALLOW_ALL_ORIGINS = True
+<<<<<<< HEAD
+=======
+
+>>>>>>> fde71d5717001d0abf23cdd5fa1e529ee91a43a9
 
 TEMPLATES = [
     {
@@ -140,3 +148,11 @@ REST_FRAMEWORK = {
     #     "rest_framework.authentication.BasicAuthentication",
     # ],
 }
+<<<<<<< HEAD
+=======
+
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
+>>>>>>> fde71d5717001d0abf23cdd5fa1e529ee91a43a9
