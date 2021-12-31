@@ -14,6 +14,9 @@ Markdown = "^3.3.6"
 django-filter = "^21.1"
 djangorestframework-simplejwt = "^5.0.0"
 review = "^1510"
+gunicorn = "^20.1.0"
+psycopg2-binary = "^2.9.3"
+django-cors-headers = "^3.10.1"
 
 [tool.poetry.dev-dependencies]
 
