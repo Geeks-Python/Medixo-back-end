@@ -40,10 +40,6 @@ INSTALLED_APPS = [
     'Medixo_admin',
     'Doctor',
     'Pharmacy',
-<<<<<<< HEAD
-    
-=======
->>>>>>> fde71d5717001d0abf23cdd5fa1e529ee91a43a9
     'corsheaders',
     "rest_framework",
 ]
@@ -62,10 +58,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Medixo.urls'
 CORS_ALLOW_ALL_ORIGINS = True
-<<<<<<< HEAD
-=======
-
->>>>>>> fde71d5717001d0abf23cdd5fa1e529ee91a43a9
 
 TEMPLATES = [
     {
@@ -142,17 +134,14 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
     ],
-    # "DEFAULT_AUTHENTICATION_CLASSES": [
-    #     "rest_framework_simplejwt.authentication.JWTAuthentication",
-    #     "rest_framework.authentication.SessionAuthentication",
-    #     "rest_framework.authentication.BasicAuthentication",
-    # ],
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.BasicAuthentication",
+    ],
 }
-<<<<<<< HEAD
-=======
 
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
 ]
->>>>>>> fde71d5717001d0abf23cdd5fa1e529ee91a43a9
