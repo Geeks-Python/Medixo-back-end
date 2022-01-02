@@ -13,11 +13,17 @@ class Doctor(models.Model):
     street = models.CharField(max_length=20, blank=True, null=True)
     user = models.ForeignKey(get_user_model() , on_delete = models.CASCADE) 
     img = models.CharField(max_length=1000, blank=True, null=False, default="https://www.jupiterhospital.com/uploadedfiles/gallery/1584607002_male-dummy.jpg")
-
+    opening_hours = models.JSONField(default=list, blank=True)
     
-
-
-
-
     def __str__(self):
         return self.name
+
+class Appointment(models.Model):
+    doctor_id = models.ForeignKey(get_user_model() , on_delete = models.CASCADE) 
+    patient_id = models.CharField(max_length=20, blank=True, null=True, default="") 
+    patient_name = models.CharField(max_length=20, blank=True, null=True, default="")
+    hour = models.CharField(max_length=20, blank=True, default="")
+    date = models.CharField(max_length=20, blank=True, default="")
+    
+    def __str__(self):
+        return self.patient_name
