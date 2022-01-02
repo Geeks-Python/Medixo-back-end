@@ -15,6 +15,8 @@ django-filter = "^21.1"
 djangorestframework-simplejwt = "^5.0.0"
 review = "^1510"
 django-cors-headers = "^3.10.1"
+psycopg2-binary = "^2.9.3"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
 
