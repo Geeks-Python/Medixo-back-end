@@ -14,7 +14,7 @@ class DoctorList(ListCreateAPIView):
 
 class DoctorDetail(RetrieveUpdateDestroyAPIView):
     queryset = Doctor.objects.all()
-    permission_classes = IsAuthenticatedOrReadOnly
+    permission_classes = (IsAuthenticatedOrReadOnly,)
     serializer_class = DoctorSerializer
 
 
@@ -24,5 +24,5 @@ class AppointmentList(ListCreateAPIView):
 
 class AppointmentDetail(RetrieveUpdateDestroyAPIView):
     queryset = Appointment.objects.all()
-    permission_classes = IsAuthenticatedOrReadOnly
+    permission_classes = (IsAuthenticatedOrReadOnly,)
     serializer_class = AppointmentSerializer
