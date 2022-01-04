@@ -22,8 +22,9 @@ class Appointment(models.Model):
     doctor_id = models.ForeignKey(get_user_model() , on_delete = models.CASCADE) 
     patient_id = models.CharField(max_length=20, blank=True, null=True, default="") 
     patient_name = models.CharField(max_length=20, blank=True, null=True, default="")
+    Doctor_name = models.CharField(max_length=20, blank=True, null=True, default="")
     hour = models.CharField(max_length=20, blank=True, default="")
     date = models.CharField(max_length=20, blank=True, default="")
-    
+    clinic_location = models.CharField(max_length=100, blank=True, default="")
     def __str__(self):
         return self.patient_name
