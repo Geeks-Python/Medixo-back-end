@@ -9,7 +9,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token['is_admin'] = user.is_superuser
         token['is_doctor'] = user.is_staff
         token['name'] = user.username
-
+        token['email'] = user.email
         return token
 
 class MyTokenObtainPairView(TokenObtainPairView):
