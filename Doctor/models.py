@@ -12,7 +12,8 @@ class Doctor(models.Model):
     building_number = models.CharField(max_length=20, blank=True, null=True)
     street = models.CharField(max_length=20, blank=True, null=True)
     user = models.ForeignKey(get_user_model() , on_delete = models.CASCADE) 
-    img = models.CharField(max_length=1000, blank=True, null=False, default="https://www.jupiterhospital.com/uploadedfiles/gallery/1584607002_male-dummy.jpg")
+    img = models.CharField(max_length=1000, blank=True, null=False, 
+    default="https://www.jupiterhospital.com/uploadedfiles/gallery/1584607002_male-dummy.jpg")
     opening_hours = models.JSONField(default=list, blank=True)
     
     def __str__(self):
