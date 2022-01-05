@@ -5,9 +5,11 @@ from rest_framework import generics
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .serializers import UserSerializer
 from rest_framework.views import APIView
+from django.contrib.auth import get_user_model
+from django.shortcuts import render
 
 
-class RegisterView(generics.CreateAPIView):
+class RegisterView(generics.ListCreateAPIView):
 
     queryset = User.objects.all()
     permission_classes = (AllowAny,)
